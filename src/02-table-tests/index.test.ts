@@ -4,8 +4,8 @@ import { simpleCalculator, Action } from './index';
 const testCasesWithIntegers = [
   { a: 1, b: 2, action: Action.Add, expected: 3 },
   { a: 2, b: 2, action: Action.Add, expected: 4 },
-  { a: 5, b: 8, action: Action.Substract, expected: -3 },
-  { a: -3, b: -10, action: Action.Substract, expected: 7 },
+  { a: 5, b: 8, action: Action.Subtract, expected: -3 },
+  { a: -3, b: -10, action: Action.Subtract, expected: 7 },
   { a: 5, b: 7, action: Action.Multiply, expected: 35 },
   { a: -3, b: -2, action: Action.Multiply, expected: 6 },
   { a: 6, b: 2, action: Action.Divide, expected: 3 },
@@ -14,7 +14,7 @@ const testCasesWithIntegers = [
   { a: -10, b: 2, action: Action.Exponentiate, expected: 100 },
 ];
 const testCasesWithFloat = [
-  { a: 6.4, b: 0.6, action: Action.Substract, expected: 5.8 },
+  { a: 6.4, b: 0.6, action: Action.Subtract, expected: 5.8 },
   { a: 3, b: -0.2, action: Action.Multiply, expected: -0.6 },
   { a: 3, b: -0.2, action: Action.Add, expected: 2.8 },
   { a: 20, b: -0.2, action: Action.Divide, expected: -100 },
