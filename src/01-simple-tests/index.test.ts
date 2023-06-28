@@ -11,12 +11,12 @@ describe('simpleCalculator tests', () => {
     expect(result).toBeCloseTo(7);
   });
 
-  test('should substract two numbers', () => {
-    let result = simpleCalculator({ a: 5, b: 8, action: Action.Substract });
+  test('should subtract two numbers', () => {
+    let result = simpleCalculator({ a: 5, b: 8, action: Action.Subtract });
     expect(result).toBe(-3);
-    result = simpleCalculator({ a: -3, b: -10, action: Action.Substract });
+    result = simpleCalculator({ a: -3, b: -10, action: Action.Subtract });
     expect(result).toBe(7);
-    result = simpleCalculator({ a: 6.4, b: 0.6, action: Action.Substract });
+    result = simpleCalculator({ a: 6.4, b: 0.6, action: Action.Subtract });
     expect(result).toBeCloseTo(5.8);
   });
 
