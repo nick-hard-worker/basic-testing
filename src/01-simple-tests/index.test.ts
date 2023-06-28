@@ -59,7 +59,7 @@ describe('simpleCalculator tests', () => {
     expect(result).toBeNull;
     result = simpleCalculator({ a: null, b: 3, action: Action.Multiply });
     expect(result).toBeNull;
-    result = simpleCalculator({ a: undefined, b: 3, action: Action.Substract });
+    result = simpleCalculator({ a: undefined, b: 3, action: Action.Subtract });
     expect(result).toBeNull;
   });
 });
