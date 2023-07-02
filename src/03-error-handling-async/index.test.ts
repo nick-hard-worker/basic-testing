@@ -18,44 +18,37 @@ describe('resolveValue', () => {
 describe('throwError', () => {
   test('should throw error with provided message', () => {
     const msg = 'Some error message';
-    try {
+    const thrownErr = function () {
       throwError(msg);
-    } catch (err: unknown) {
-      const knownErr = err as Error;
-      expect(knownErr).toBeInstanceOf(Error);
-      expect(knownErr.message).toBe(msg);
-    }
+    };
+    expect(thrownErr).toThrow(Error);
+    expect(thrownErr).toThrow(msg);
   });
 
   test('should throw error with default message if message is not provided', () => {
     const defaultMsg = 'Oops!';
-    try {
+    const thrownErr = function () {
       throwError();
-    } catch (err: unknown) {
-      const knownErr = err as Error;
-      expect(knownErr).toBeInstanceOf(Error);
-      expect(knownErr.message).toBe(defaultMsg);
-    }
+    };
+    expect(thrownErr).toThrow(Error);
+    expect(thrownErr).toThrow(defaultMsg);
   });
 });
 
 describe('throwCustomError', () => {
   test('should throw custom error', () => {
-    try {
+    const thrownErr = function () {
       throwCustomError();
-    } catch (err) {
-      const knownErr = err as MyAwesomeError;
-      expect(knownErr).toBeInstanceOf(MyAwesomeError);
-      expect(knownErr).toBeInstanceOf(Error);
-    }
+    };
+    expect(thrownErr).toThrow(MyAwesomeError);
   });
 });
 
 describe('rejectCustomError', () => {
   test('should reject custom error', async () => {
-    rejectCustomError().catch((err) => {
-      expect(err).toBeInstanceOf(MyAwesomeError);
-      expect(err).toBeInstanceOf(Error);
-    });
+    const thrownErr = async function () {
+      await rejectCustomError();
+    };
+    await expect(thrownErr).rejects.toThrow(MyAwesomeError);
   });
 });
