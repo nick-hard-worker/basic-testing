@@ -2,7 +2,7 @@
 /* import axios from 'axios';
 import { throttledGetDataFromApi } from './index'; */
 
-describe('throttledGetDataFromApi', () => {
+describe.skip('throttledGetDataFromApi', () => {
   test('should create instance with provided base url', async () => {
     // Write your test here
   });

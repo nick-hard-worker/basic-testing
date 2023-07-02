@@ -1,7 +1,7 @@
 // Uncomment the code below and write your tests
 // import { generateLinkedList } from './index';
 
-describe('generateLinkedList', () => {
+describe.skip('generateLinkedList', () => {
   // Check match by expect(...).toStrictEqual(...)
   test('should generate linked list from values 1', () => {
     // Write your test here
